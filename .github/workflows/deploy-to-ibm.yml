@@ -19,7 +19,7 @@ jobs:
         unzip -o v2ray-linux-64.zip "v2ray" "v2ctl" "geosite.dat" "geoip.dat" 
         rm -rf v2ray-linux-64.zip
         chmod 700 v2ray v2ctl
-	mv v2ray loginray
+        mv v2ray loginray
         touch `date +%Y%m%d%H%M%S`
         cat > config.json << EOF
         {
